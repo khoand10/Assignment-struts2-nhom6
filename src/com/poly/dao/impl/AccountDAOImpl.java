@@ -1,7 +1,8 @@
-package com.poly.dao;
+package com.poly.dao.impl;
 
 import com.googlecode.s2hibernate.struts2.plugin.annotations.SessionTarget;
 import com.googlecode.s2hibernate.struts2.plugin.annotations.TransactionTarget;
+import com.poly.dao.AccountDAO;
 import com.poly.entity.Account;
 import org.hibernate.Query;
 import org.hibernate.Session;

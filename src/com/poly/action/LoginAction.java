@@ -1,9 +1,8 @@
 package com.poly.action;
 
 import com.poly.dao.AccountDAO;
-import com.poly.dao.AccountDAOImpl;
+import com.poly.dao.impl.AccountDAOImpl;
 import com.poly.entity.Account;
-import javax.servlet.http.HttpServletRequest;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 @SuppressWarnings("serial")
