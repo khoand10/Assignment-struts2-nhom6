@@ -1,5 +1,5 @@
 
-bsquid:UselessImportCheck"9Remove this unused import 'org.hibernate.SessionFactory'.(ñ¦«¬şÿÿÿÿ
-Zsquid:UselessImportCheck"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³
 [squid:UselessImportCheck"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ
+Zsquid:UselessImportCheck"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³
+bsquid:UselessImportCheck"9Remove this unused import 'org.hibernate.SessionFactory'.(ñ¦«¬şÿÿÿÿ
 Ysquid:UselessImportCheck"0Remove this unused import 'org.hibernate.Query'.(ıÜßùÿÿÿÿ

@@ -3,6 +3,7 @@ package com.poly.entity;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.io.Serializable;
+
 @Entity
 @Table(name = "class")
 public class Class implements Serializable {

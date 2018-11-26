@@ -39,3 +39,7 @@ Q
 ,src/com/poly/dao/impl/DepartmentDAOImpl.java,d/1/d13cd37dd669ecfbc83a5a91d52a30c5ed8569e4
 Z
 *src/com/poly/dao/impl/ProvinceDAOImpl.java,c/2/c2bf7c38bf4e6cca1cdb32e61bf60d7f5c623934
+U
+%src/com/poly/utils/HibernateUtil.java,0/5/05b75f8cc12a3f8d4218fb0178f7240dc776a8a9
+T
+$src/com/poly/action/ClassAction.java,4/4/44bd1418c261aa14df1b33e6284b8757c00be34f
