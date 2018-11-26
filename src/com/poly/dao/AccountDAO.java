@@ -8,4 +8,9 @@ import org.hibernate.Transaction;
 
 public interface AccountDAO{
     Account login(String email, String password);
+
+    Account findOne(String email);
+
+    void create(Account account);
+
 }

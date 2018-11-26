@@ -5,10 +5,25 @@
 
 <struts>
     <package name="default" extends="hibernate-default">
+
+        <!-- Interceptors -->
+        <interceptors>
+            <interceptor name="loginInterceptor" class="com.poly.interceptor.LoginInterceptor"/>
+            <interceptor-stack name="loginStack">
+                <interceptor-ref name="loginInterceptor"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+
+        <!-- Login pages -->
         <action name="login" method="login" class="com.poly.action.LoginAction">
-            <result name="success">/welcome.jsp</result>
-            <result name="error">/error.jsp</result>
             <result name="input">/login.jsp</result>
+        </action>
+
+        <action name="processLogin" class="com.poly.action.LoginAction">
+            <result name="success" type="redirectAction">/welcome.jsp</result>
+            <result name="error">/error.jsp</result>
+            <result name="input">/WEB-INF/pages/login.jsp</result>
         </action>
     </package>
 </struts>

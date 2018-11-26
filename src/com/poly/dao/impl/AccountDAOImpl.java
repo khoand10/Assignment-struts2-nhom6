@@ -30,4 +30,33 @@ public class AccountDAOImpl implements AccountDAO {
         return user;
     }
 
+    @Override
+    public void create(Account account) {
+        session.beginTransaction();
+        session.persist(account);
+        session.getTransaction().commit();
+        session.close();
+    }
+
+    @Override
+    public Account findOne(String email) {
+        session.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+
+        String hql = "from Account a " +
+                "where a.email = :email";
+
+        Account account;
+        try {
+            account = (Account) session.createQuery(hql).setParameter("email", email);
+        } catch (Exception e) {
+            account = null;
+        }
+
+        session.getTransaction().commit();
+        session.close();
+        return account;
+    }
+
+
 }

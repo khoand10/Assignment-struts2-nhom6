@@ -1,16 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC
-        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<?xml version="1.0" encoding="utf-8"?>
+        <!DOCTYPE hibernate-configuration SYSTEM
+                "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/QLHV</property>
+        <!-- Set here configurations for the database connection -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/QLHV?useSSL=false</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="connection.password">123456</property>
-        <property name="connection.pool_size">1</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.password">12345678</property>
+
+        <!-- Show or log each formatted sql query -->
         <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- Allows Hibernate to generate SQL optimized for a particular DBMS -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <property name="hibernate.current_session_context_class">thread</property>
+
         <mapping class="com.poly.entity.Account"/>
         <mapping class="com.poly.entity.Class"/>
         <mapping class="com.poly.entity.Department"/>
