@@ -4,26 +4,43 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd" >
 
 <struts>
-    <package name="default" extends="hibernate-default">
+    <constant name="struts.devMode" value="true"/>
 
-        <!-- Interceptors -->
-        <interceptors>
-            <interceptor name="loginInterceptor" class="com.poly.interceptor.LoginInterceptor"/>
-            <interceptor-stack name="loginStack">
-                <interceptor-ref name="loginInterceptor"/>
-                <interceptor-ref name="defaultStack"/>
-            </interceptor-stack>
-        </interceptors>
+    <!--&lt;!&ndash; Change action path extension from .action to .html &ndash;&gt;-->
+    <!--<constant name="struts.action.extension" value="html"/>-->
+
+    <!-- https://struts.apache.org/docs/wildcard-method-selection.html -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+
+    <!-- Select simple theme of Struts  -->
+    <constant name="struts.ui.theme" value="simple"/>
+
+    <!--&lt;!&ndash; Global properties file &ndash;&gt;-->
+    <!--<constant name="struts.custom.i18n.resources" value="global"/>-->
+
+    <!-- Actions -->
+    <package name="manager" namespace="/" extends="struts-default">
+
+        <!--&lt;!&ndash; Interceptors &ndash;&gt;-->
+        <!--<interceptors>-->
+            <!--<interceptor name="loginInterceptor" class="com.poly.interceptor.LoginInterceptor"/>-->
+            <!--<interceptor-stack name="loginStack">-->
+                <!--<interceptor-ref name="loginInterceptor"/>-->
+                <!--<interceptor-ref name="defaultStack"/>-->
+            <!--</interceptor-stack>-->
+        <!--</interceptors>-->
 
         <!-- Login pages -->
-        <action name="login" method="login" class="com.poly.action.LoginAction">
+        <action name="login" class="com.poly.action.LoginAction" method="input">
             <result name="input">/login.jsp</result>
         </action>
 
-        <action name="processLogin" class="com.poly.action.LoginAction">
-            <result name="success" type="redirectAction">/welcome.jsp</result>
+        <!-- Login pages -->
+        <action name="processLogin"  class="com.poly.action.LoginAction">
+            <!--<result name="success" type="redirectAction">/welcome.jsp</result>-->
+            <result name="success">/welcome.jsp</result>
             <result name="error">/error.jsp</result>
-            <result name="input">/WEB-INF/pages/login.jsp</result>
+            <result name="input">/login.jsp</result>
         </action>
     </package>
 </struts>

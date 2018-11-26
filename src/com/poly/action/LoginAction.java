@@ -24,7 +24,7 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
         if (account == null) {
             addActionError("Invalid email or password");
-            return INPUT;
+            return ERROR;
         } else {
             session.put("account", account);
             session.put("success", "You have logged in successfully!");

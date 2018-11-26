@@ -10,7 +10,7 @@
 </head>
 <body>
 <h3>Đăng nhập</h3>
-<s:form action="login">
+<s:form action="processLogin">
     <s:textfield name="email" label="Email"></s:textfield>
     <s:textfield name="password" label="Mật khẩu" type="password"></s:textfield>
     <s:submit value="Đăng nhập"></s:submit>
