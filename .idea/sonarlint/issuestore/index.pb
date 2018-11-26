@@ -43,3 +43,13 @@ U
 %src/com/poly/utils/HibernateUtil.java,0/5/05b75f8cc12a3f8d4218fb0178f7240dc776a8a9
 T
 $src/com/poly/action/ClassAction.java,4/4/44bd1418c261aa14df1b33e6284b8757c00be34f
+W
+'src/com/poly/action/ProvinceAction.java,e/c/ec326f3209d32eb74f43c3773d78846b5252e759
+Y
+)src/com/poly/action/DepartmentAction.java,2/c/2c292d2c5959e098bc3020b91d7e0e46b5218e73
+H
+web/views/form_class.jsp,d/4/d47801f3a834662945be4d8de7ed23efb16f4fe2
+C
+web/views/class.jsp,f/6/f657a6963ff4da247a865fada26e0158b17bc5d4
+F
+web/views/province.jsp,f/b/fb0136fc68506c827dfdb45c1f961e075d2eb488
